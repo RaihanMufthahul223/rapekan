@@ -435,12 +435,14 @@ img {
 }
 
 .bento-item.bento-sampah .bento-content,
-.bento-item.bento-kerajinan .bento-content{
+.bento-item.bento-kerajinan .bento-content,
+.bento-item.bento-edukasi .bento-content {
     color: var(--color-white);
 }
 
 .bento-item.bento-sampah h3,
-.bento-item.bento-kerajinan h3 {
+.bento-item.bento-kerajinan h3,
+.bento-item.bento-edukasi h3 {
     color: var(--color-white);
 }
 
@@ -457,7 +459,8 @@ img {
 }
 
 .bento-item.bento-sampah .icon-box,
-.bento-item.bento-kerajinan .icon-box {
+.bento-item.bento-kerajinan .icon-box,
+.bento-item.bento-edukasi .icon-box {
     background-color: rgba(255, 255, 255, 0.2);
     color: var(--color-white);
     backdrop-filter: blur(4px);
