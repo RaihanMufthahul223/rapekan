@@ -721,8 +721,19 @@ img {
         grid-template-columns: 1fr;
         gap: 2.5rem;
     }
+    .contact-box {
+        padding: 3rem 1.5rem;
+    }
+    .contact-text h2 {
+        font-size: 2.25rem;
+    }
     .contact-actions {
         flex-direction: column;
+        width: 100%;
+    }
+    .contact-actions .btn {
+        width: 100%;
+        justify-content: center;
     }
     .bento-grid {
         grid-template-columns: 1fr;
