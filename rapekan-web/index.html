@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapekan | Ranah Pemuda Kreatif Pakuwon</title>
+    <meta name="description" content="Gerakan nyata pemuda Pakuwon berfokus pada alsintan, daur ulang sampah, kerajinan batang pisang, dan edukasi lingkungan.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body style="overflow: hidden;">
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader-content">
+            <h1 class="loader-logo">RAPEKAN</h1>
+            <div class="loader-bar"><div class="loader-progress"></div></div>
+            <p>Membangun Pakuwon...</p>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="#" class="brand">RAPEKAN</a>
+            <nav class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="#tentang">Tentang</a></li>
+                    <li><a href="#program">Program</a></li>
+                    <li><a href="#cerita">Cerita</a></li>
+                    <li><a href="#katalog">Katalog</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <a href="#kontak" class="btn btn-primary">Hubungi Kami</a>
+                <button class="mobile-menu-btn" aria-label="Menu" id="mobile-menu-btn">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay" id="mobile-nav">
+        <div class="mobile-nav-content">
+            <button class="close-menu-btn" id="close-menu-btn">
+                <i data-feather="x"></i>
+            </button>
+            <ul class="mobile-nav-links">
+                <li><a href="#tentang" class="mobile-link">Tentang</a></li>
+                <li><a href="#program" class="mobile-link">Program</a></li>
+                <li><a href="#cerita" class="mobile-link">Cerita</a></li>
+                <li><a href="#katalog" class="mobile-link">Katalog</a></li>
+                <li><a href="#kontak" class="btn btn-primary mobile-link">Hubungi Kami</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="beranda">
+            <div class="hero-bg">
+                <img src="assets/images/hero_bg.jpg" alt="Lanskap Pertanian Pakuwon">
+                <div class="overlay"></div>
+            </div>
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <span class="badge fade-up">Dari Pemuda, Untuk Bumi Pakuwon</span>
+                    <h1 class="fade-up">Tangan Lokal,<br>Aksi Nyata.</h1>
+                    <p class="fade-up">Kami adalah penggerak perubahan di desa Pakuwon. Mengelola teknologi tani, menghidupkan sirkulasi sampah, dan memberdayakan karya dari alam.</p>
+                    <div class="hero-cta fade-up">
+                        <a href="#program" class="btn btn-primary">Jelajahi Program</a>
+                        <a href="#kontak" class="btn btn-secondary">Kolaborasi Bersama</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Impact Section -->
+        <section class="impact" id="tentang">
+            <div class="container">
+                <div class="impact-grid">
+                    <div class="impact-card">
+                        <h2 class="counter" data-target="11">0</h2>
+                        <p>Pengrajin Lokal Aktif (RW 05 & 08)</p>
+                    </div>
+                    <div class="impact-card">
+                        <h2 class="counter-text">Ton+</h2>
+                        <p>Sampah Terolah (Organik & Anorganik)</p>
+                    </div>
+                    <div class="impact-card">
+                        <h2 class="counter-text">Regional</h2>
+                        <p>Jangkauan Mitra: Samarang, Tarogong Kidul, Cisurupan</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pilar Program (Bento Grid) -->
+        <section class="program section-padding" id="program">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2>Empat Pilar Gerakan</h2>
+                    <p>Fondasi utama OKP Rapekan dalam memajukan kesejahteraan warga dan menjaga ekologi desa.</p>
+                </div>
+                
+                <div class="bento-grid">
+                    <!-- Sektor Tani -->
+                    <div class="bento-item bento-tani">
+                        <div class="bento-content">
+                            <div class="icon-box"><i data-feather="tool"></i></div>
+                            <h3>Manajemen Alsintan</h3>
+                            <p>Koordinasi dan penyediaan Alat & Mesin Pertanian (Alsintan) untuk mempermudah dan memodernisasi cara kerja petani lokal Pakuwon.</p>
+                        </div>
+                    </div>
+
+                    <!-- Sektor Sampah -->
+                    <div class="bento-item bento-sampah">
+                        <img src="assets/images/waste_mgmt.jpg" alt="Pengolahan Sampah" class="bento-bg">
+                        <div class="bento-overlay"></div>
+                        <div class="bento-content">
+                            <div class="icon-box"><i data-feather="refresh-cw"></i></div>
+                            <h3>Sirkular Sampah</h3>
+                            <p>Mengubah limbah organik menjadi kompos, limbah makanan menjadi pakan ternak (maggot), serta mengelola sampah anorganik.</p>
+                        </div>
+                    </div>
+
+                    <!-- Sektor Kerajinan -->
+                    <div class="bento-item bento-kerajinan">
+                        <img src="assets/images/craft_product.jpg" alt="Kerajinan Batang Pisang" class="bento-bg">
+                        <div class="bento-overlay"></div>
+                        <div class="bento-content">
+                            <div class="icon-box"><i data-feather="shopping-bag"></i></div>
+                            <h3>Kerajinan Serat Alam</h3>
+                            <p>Produksi tas dan suvenir dari serat gedebog pisang yang memberdayakan ekonomi warga.</p>
+                        </div>
+                    </div>
+
+                    <!-- Sektor Edukasi -->
+                    <div class="bento-item bento-edukasi">
+                        <div class="bento-content">
+                            <div class="icon-box"><i data-feather="book-open"></i></div>
+                            <h3>Edukasi Usia Dini</h3>
+                            <p>Ruang interaktif untuk mengenalkan ekologi, alam, dan tanggung jawab lingkungan kepada generasi muda desa.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cerita Pengrajin -->
+        <section class="story section-padding" id="cerita">
+            <div class="container">
+                <div class="story-layout">
+                    <div class="story-image">
+                        <!-- Menggunakan placeholder alam desa untuk visual warga -->
+                        <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&q=80" alt="Pengrajin Lokal">
+                    </div>
+                    <div class="story-content">
+                        <h2>Menghidupkan Tradisi dari Beranda Warga</h2>
+                        <p>Lebih dari sekadar produk, anyaman serat batang pisang kami adalah cerita tentang gotong royong. Saat ini, 11 pengrajin terampil dari RW 05 dan RW 08 bekerja dari rumah masing-masing.</p>
+                        <ul class="process-list">
+                            <li>
+                                <div class="process-icon"><i data-feather="home"></i></div>
+                                <div>
+                                    <h4>Home Industry</h4>
+                                    <p>Warga memproses serat secara mandiri di rumah.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="process-icon"><i data-feather="box"></i></div>
+                                <div>
+                                    <h4>Agregasi & Quality Control</h4>
+                                    <p>Hasil anyaman dikumpulkan di markas Rapekan untuk penyempurnaan.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="process-icon"><i data-feather="truck"></i></div>
+                                <div>
+                                    <h4>Distribusi Kemitraan</h4>
+                                    <p>Disalurkan sebagai suvenir yayasan/mitra hingga pasar regional.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Katalog Produk -->
+        <section class="katalog section-padding bg-light" id="katalog">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2>Karya Asli Pakuwon</h2>
+                    <p>Produk ramah lingkungan hasil keterampilan warga dan alam yang lestari.</p>
+                </div>
+                
+                <div class="product-grid">
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="assets/images/craft_product.jpg" alt="Tas Anyaman">
+                        </div>
+                        <div class="product-info">
+                            <h3>Tas Anyaman Gedebog</h3>
+                            <p>Kuat, estetis, dan 100% biodegradable. Cocok untuk belanja harian atau fashion kasual.</p>
+                            <a href="#kontak" class="link-arrow">Pesan Sekarang <i data-feather="arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="https://images.unsplash.com/photo-1621506289937-a8e4df240d0b?auto=format&fit=crop&q=80" alt="Gantungan Kunci">
+                        </div>
+                        <div class="product-info">
+                            <h3>Gantungan Kunci Etnik</h3>
+                            <p>Suvenir khas yang dibuat dengan ketelitian tinggi. Sering dipesan untuk acara kemitraan.</p>
+                            <a href="#kontak" class="link-arrow">Pesan Sekarang <i data-feather="arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="https://images.unsplash.com/photo-1592989808381-80fc9ed9d968?auto=format&fit=crop&q=80" alt="Pupuk Kompos">
+                        </div>
+                        <div class="product-info">
+                            <h3>Pupuk Kompos Organik</h3>
+                            <p>Hasil sirkularitas sampah rumah tangga. Menyuburkan tanah tanpa bahan kimia berbahaya.</p>
+                            <a href="#kontak" class="link-arrow">Pesan Sekarang <i data-feather="arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA & Kontak -->
+        <section class="contact section-padding" id="kontak">
+            <div class="container">
+                <div class="contact-box">
+                    <div class="contact-text">
+                        <h2>Siap Bergerak Bersama?</h2>
+                        <p>Mari berkolaborasi untuk memajukan potensi desa. Baik untuk pesanan produk, kunjungan edukasi, atau kemitraan program berkelanjutan.</p>
+                    </div>
+                    <div class="contact-actions">
+                        <a href="https://wa.me/6280000000000" class="btn btn-primary btn-large" target="_blank">
+                            <i data-feather="message-circle"></i> Chat WhatsApp
+                        </a>
+                        <a href="mailto:halo@rapekan.id" class="btn btn-secondary btn-large">
+                            <i data-feather="mail"></i> Email Kami
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h3>RAPEKAN</h3>
+                <p>Ranah Pemuda Kreatif Pakuwon. Berakar dari desa, berdampak untuk semesta.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram"><i data-feather="instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i data-feather="facebook"></i></a>
+                    <a href="#" aria-label="Youtube"><i data-feather="youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Navigasi</h4>
+                <ul>
+                    <li><a href="#tentang">Tentang Kami</a></li>
+                    <li><a href="#program">Program</a></li>
+                    <li><a href="#cerita">Cerita Pengrajin</a></li>
+                    <li><a href="#katalog">Katalog Produk</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Lokasi & Kontak</h4>
+                <ul>
+                    <li><i data-feather="map-pin"></i> Desa Pakuwon, Kab. Garut</li>
+                    <li><i data-feather="phone"></i> +62 800 0000 0000</li>
+                    <li><i data-feather="mail"></i> halo@rapekan.id</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 OKP Rapekan. Membangun dengan Hati.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Init JS -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/animations.js"></script>
+</body>
+</html>
